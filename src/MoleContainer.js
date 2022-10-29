@@ -1,35 +1,25 @@
-import {useEffect} from 'react'
-//import moleImg from './Images/mole.png'
-import moleImg from './Images/molehill.png'
+import React from 'react'
 
-function Mole(props){
-    useEffect(() => {
-        // Feel free to adjust this number as you see fit.
-        // It is your game to tune!
-        let randSeconds = Math.ceil(Math.random() * 5000)
-        let timer = setTimeout(() => {
-            props.setDisplayMole(false)
-        }, randSeconds)
-        return () => clearTimeout(timer)
-    })
-
-    return (
-        <div>
-            <img style={{'width': '30vw'}}
-            src={moleImg}
-            onClick={props.handleClick} />
-        </div>
-    )
-}
-
-
-
-function MoleContainer(props) {
+function MoleContainer() {
   return (
-    <div>
-      <h2>MoleContainer</h2>
-    </div>
+    <div>MoleContainer</div>
   )
 }
 
 export default MoleContainer
+
+
+// function MoleContainer() {
+//   const [count, setCount] = useState(0);
+
+//   return (
+//     <div>
+//       <p>MoleContainer {count times</p>
+//       <button onClick={() => setCount{count + 1)}>
+//       Click Me
+//       </button>
+//       </div>
+//   );
+// }
+
+//export default MoleContainer
